@@ -1,3 +1,3 @@
 # TEAM_PROJECT
 
-university
+shopping mall
