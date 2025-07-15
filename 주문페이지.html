@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>주문하기</title>
+  <style>
+    /* --- (CSS 그대로) --- */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fff;
+      overflow-x: auto;
+    }
+
+    .header {
+      background: #cdc1b7;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 34px;
+    }
+
+    .top-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 38px;
+      font-size: 14px;
+      height: 42px;
+      background: #fff;
+      color: #222;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 16px;
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .order-container {
+      padding: 0 40px;
+
+      min-width: 1280px;
+      margin: 0 0 50px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      overflow-x: auto;
+
+    }
+
+    .order-form {
+      width: 750px;
+      margin-top: 18px;
+    }
+
+    .account-row {
+      background: #f5f5f5;
+      font-size: 13px;
+      padding: 12px 18px;
+      border: 1px solid #ded6d1;
+      margin-bottom: 30px;
+      color: #222;
+      display: flex;
+      justify-content: space-between;
+      /* 양쪽 정렬 */
+      align-items: center;
+    }
+
+    .account-email {
+      color: #7c6a5a;
+      font-weight: bold;
+      margin-right: 2px;
+    }
+
+    .qq1 {
+      color: #888;
+      font-weight: normal;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .row-title1 {
+      font-size: 20px;
+      color: #222;
+      font-weight: bold;
+    }
+
+    .row-title2 {
+      font-size: 15px;
+      color: #222;
+      font-weight: bold;
+    }
+
+    .row-row {
+      font-size: 9px;
+      color: #666666;
+
+    }
+
+    .row-row2 {
+      font-size: 9px;
+      color: #222;
+
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      margin-top: 32px;
+      color: #222;
+    }
+
+    .section-title:first-child {
+      margin-top: 0;
+    }
+
+    .sub-title {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .order-form label {
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #222;
+      font-weight: bold;
+      display: block;
+    }
+
+    .input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 3px;
+      background: #cfc3bb;
+      color: #222;
+      margin-bottom: 0;
+      outline: none;
+    }
+
+    .input::placeholder {
+      color: #8b857d;
+    }
+
+    .input.short {
+      width: 90%;
+    }
+
+    .phone-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .zip-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 30px;
+      height: 21px;
+    }
+
+    .zip-row input {
+      flex: 1;
+
+    }
+
+    .zip-row button {
+      min-width: 100px;
+      background: #b6a59d;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .address-row {
+
+      margin-bottom: 10px;
+    }
+
+    .input.full {
+      width: 100%;
+
+    }
+
+    .full-input {
+      width: 300px;
+
+    }
+
+
+
+
+
+    .recipient-row {
+      margin-top: 26px;
+    }
+
+    .pay-section-title {
+      margin: 28px 0 8px 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .pay-type-row {
+      border: 1px solid #222;
+      border-radius: 4px;
+      padding: 6px 12px;
+      margin-bottom: 12px;
+      width: 320px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pay-type-row label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #222;
+      margin: 0;
+    }
+
+    .order-summary {
+      min-width: 310px;
+      width: 350px;
+      border: 1px solid #d2cac3;
+      border-radius: 8px;
+      padding: 25px 18px 22px 18px;
+      background: #fff;
+      margin-top: 14px;
+      height: fit-content;
+    }
+
+    .summary-title {
+      text-align: center;
+      border-bottom: 7px solid #bbb;
+      padding-bottom: 10px;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 14px;
+      color: #222;
+    }
+
+    .summary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-bottom: 2px solid #bbb;
+      padding-bottom: 10px;
+    }
+
+    .summary-item {
+
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border-bottom: 2px solid #bbb;
+      padding-top: 25px;
+      padding-bottom: 14px;
+
+
+    }
+
+    .summary-thumb {
+      min-width: 95px;
+      min-height: 95px;
+      background: #cfc3bb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #888;
+      border-radius: 4px;
+      margin-top: 1px;
+    }
+
+    .summary-info {
+
+      padding-left: 14px;
+      font-size: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+      display: block;
+      max-width: 170px;
+    }
+
+    .cart-meta {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+      gap: 6px;
+    }
+
+    .cart-meta select {
+      margin: 0 4px;
+    }
+
+    .cart-name {
+      font-weight: bold;
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+      display: block;
+    }
+
+    .coupon-section {
+      margin: 20px 0 12px 0;
+    }
+
+    .coupon-btn {
+      width: 100%;
+      background: #e7e1dd;
+      border: none;
+      padding: 10px;
+      border-radius: 3px;
+      font-size: 14px;
+      color: #523622;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .coupon-options {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #d2cac3;
+      border-radius: 3px;
+      min-width: 180px;
+      margin-top: 1px;
+      z-index: 1;
+    }
+
+    .coupon-options div {
+      padding: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .coupon-options div:hover {
+      background: #eee;
+    }
+
+    .price-list {
+      font-size: 14px;
+      margin: 14px 0;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .total-row {
+      font-weight: bold;
+      margin-top: 8px;
+      font-size: 15px;
+    }
+
+    .pay-btn {
+      width: 100%;
+      background: #b6a59d;
+      color: #fff;
+      border: none;
+      padding: 14px 0;
+      margin-top: 18px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background: #f7f4f2;
+      font-size: 13px;
+      color: #222;
+      padding: 30px 0 24px 0;
+      text-align: left;
+      border-top: 1px solid #e1dbd6;
+      margin-top: 60px;
+    }
+
+    .footer-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      gap: 42px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .footer-info,
+    .footer-cs,
+    .footer-etc {
+      flex: 1;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .footer-cs {
+      min-width: 190px;
+    }
+
+    .footer .small {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .footer-bar {
+      margin-top: 22px;
+      border-top: 1px solid #ded6d1;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      padding-top: 8px;
+      letter-spacing: 0.6px;
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .remove-btn {
+      margin-left: auto;
+    }
+
+    .buyer-row-flex {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .row-title3 {
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .check-label {
+
+      display: flex;
+      align-items: flex-start;
+      font-size: 14px;
+      gap: 4px;
+    }
+
+    .info-text {
+      display: inline-block;
+      margin-top: 3px;
+    }
+
+    .chc {
+      vertical-align: middle;
+    }
+
+    .form-flex {
+      display: flex;
+      gap: 25px;
+    }
+
+    .form-flex input {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header"></div>
+  <div class="top-menu">
+    <div>NEW 10%</div>
+    <div>BEST 50</div>
+    <div>이벤트</div>
+    <div>SALE(50%)</div>
+    <div>WOMAN</div>
+    <div>MAN</div>
+    <div>ACC</div>
+    <div>COMMUNITY</div>
+    <div style="flex:1"></div>
+    <div>LOGIN</div>
+    <div>JOIN</div>
+    <div>ORDER</div>
+    <div>CART</div>
+    <div>MY PAGE</div>
+    <input type="text" placeholder="검색"
+      style="height:22px; border:1px solid #bbb; border-radius:3px; font-size:13px; padding:0 6px; margin-left:10px;">
+    <span style="font-size:17px; color:#bbb; margin-left:4px;">&#128269;</span>
+  </div>
+  <div class="logo">DAYFUL</div>
+  <div style="height:28px"></div>
+
+  <div class="order-container">
+    <form class="order-form" autocomplete="off">
+
+      <div class="account-row">
+        <span>결제진행 이메일 계정:</span>
+        <span>
+          <span class="account-email" id="login-email"></span>
+          <span id="login-username" class="qq1"></span>
+        </span>
+      </div>
+
+      <div class="buyer-section">
+        <div class="row-title1">배송지 주소</div>
+        <div class="row-row">상품수령장소를 알려주세요.</div><br>
+        <div class="row-title2">구매자</div>
+        <div class="row-row">출고 이후에는 정보 수정이 불가합니다.</div><br>
+        <div class="buyer-row-flex">
+          <div class="row-title3">구매자정보</div>
+          <label class="check-label">
+            <span class="info-text">회원정보 사용</span>
+            <input class="chc" type="checkbox" id="buyer-info-check" checked>
+          </label>
+        </div>
+        <div class="row-row">*은 필수 입력입니다.</div>
+
+
+        <div class="form-flex">
+          <div class="input-wrap">
+            <label for="buyer-last">성*</label>
+            <input type="text" id="buyer-last" maxlength="8" readonly>
+          </div>
+          <div class="input-wrap">
+            <label for="buyer-first">이름*</label>
+            <input type="text" id="buyer-first" maxlength="8" readonly>
+          </div>
+        </div>
+        <br>
+        <div class="row-row2">휴대폰 번호가 아닌 자택 또는 안심번호 사용 시 배송 알림 전송이 제한될 수 있습니다.</div>
+        <div class="nationphone-row">
+          <select style="min-width: 30px; height: 21px; text-align: center;" id="buyer-nation"></select>
+          <input type="tel" id="buyer-phone" maxlength="20" readonly>
+        </div>
+        <script>
+          const countryCodes = [
+            { name: "대한민국", code: "+82" },
+            { name: "일본", code: "+81" },
+            { name: "중국", code: "+86" },
+            { name: "미국", code: "+1" },
+            { name: "캐나다", code: "+1" },
+            { name: "영국", code: "+44" },
+            { name: "프랑스", code: "+33" },
+            // ... 전체 국가코드 데이터!
+          ];
+          const $nation = document.getElementById('buyer-nation');
+          countryCodes.forEach(item => {
+            const opt = document.createElement('option');
+            opt.value = item.code;
+            opt.textContent = `${item.name} (${item.code})`;
+            $nation.appendChild(opt);
+          });
+          $nation.value = "+82"; // 기본값 대한민국
+        </script>
+
+
+
+
+        <div class="zip-row">
+          <input type="text" id="buyer-zip" readonly>
+          <button type="button">검색</button>
+        </div>
+
+        <div class="row-row2">주소</div>
+        <input type="text" id="buyer-address" class="full-input" readonly>
+
+        <div style="margin-top: 10px;" class="row-row2">상세주소</div>
+        <input type="text" id="buyer-detail" class="full-input" readonly>
+      </div>
+
+      <!-- 수령자 정보 박스 -->
+      <div class="recipient-section" style="margin-top:26px;">
+        <div class="row-title2">수령자</div>
+        <div class="buyer-row-flex">
+          <div class="row-title3">수령자정보</div>
+          <label class="check-label">
+            <span class="info-text">수령자 구매자 정보사용</span>
+            <input class="chc" type="checkbox" id="recipient-info-check" checked>
+          </label>
+        </div>
+        <div class="row-row">*은 필수 입력입니다.</div>
+        <div id="recipient-input-wrap" style="display:none; margin-top:12px;">
+          <div class="form-flex">
+            <div class="input-wrap">
+              <label for="recipient-last">성*</label>
+              <input type="text" id="recipient-last">
+            </div>
+            <div class="input-wrap">
+              <label for="recipient-first">이름*</label>
+              <input type="text" id="recipient-first">
+            </div>
+          </div>
+          <br>
+          <div class="row-row2">휴대폰 번호가 아닌 자택 또는 안심번호 사용 시 배송 알림 전송이 제한될 수 있습니다.</div>
+          <div class="nationphone-row">
+            <select style="min-width: 30px; height: 21px; text-align: center;" id="recipient-nation"></select>
+            <input type="tel" id="recipient-phone" maxlength="20" placeholder="휴대전화">
+          </div>
+          <div class="zip-row">
+            <input type="text" id="recipient-zip" placeholder="우편번호">
+            <button type="button">검색</button>
+          </div>
+          <div class="row-row2">주소</div>
+          <input type="text" id="recipient-address" class="full-input" placeholder="주소">
+          <div style="margin-top: 10px;" class="row-row2">상세주소</div>
+          <input type="text" id="recipient-detail" class="full-input" placeholder="상세주소 (아파트명, 호수 등)">
+        </div>
+
+      </div>
+
+      <div class="pay-section-title">결제하기</div>
+      <div style="font-size:13px; color:#222; margin-bottom:6px;">결제 방식을 선택해주세요.</div>
+      <div class="pay-type-row">
+        <label><input type="radio" name="paytype" checked> 네이버 간편결제</label>
+        <label><input type="radio" name="paytype"> 카드 간편결제</label>
+        <label><input type="radio" name="paytype"> 무통장입금</label>
+      </div>
+    </form>
+
+    <!-- 주문 요약 박스 (오른쪽) -->
+    <div class="order-summary">
+      <div class="summary-title">주문 요약<br><span id="cart-count">0</span>개의 상품</div>
+      <div class="summary-list" id="cart-list"></div>
+      <div class="coupon-section" style="position:relative;">
+        <button class="coupon-btn" type="button" onclick="toggleCoupon()">쿠폰 선택</button>
+        <div class="coupon-options" id="coupon-list">
+          <div onclick="applyCoupon(10)">10% 쿠폰</div>
+          <div onclick="applyCoupon(20)">20% 쿠폰</div>
+        </div>
+      </div>
+      <div class="price-list">
+        <div class="price-row"><span>소계</span><span id="subtotal">0원</span></div>
+        <div class="price-row"><span>쿠폰할인</span><span id="discount">0원</span></div>
+        <div class="price-row total-row"><span>총 결제금액</span><span id="total">0원</span></div>
+      </div>
+      <button class="pay-btn">결제하기</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-wrap">
+      <div class="footer-info">
+        COMPANY : 이뎀에 | 대표이사 : 김태연<br>
+        사업자등록번호 : 528-08-01751 | 사업자정보확인<br>
+        통신판매업신고 : 제 2023-달구-0176 호<br>
+        주소 : 대구광역시 중구 중앙대로 366 반월당 센트럴타워 9층, 10층<br>
+        개인정보관리책임자 : 김태연 | 이메일 : Koreaf7777@naver.com
+      </div>
+      <div class="footer-cs">
+        CS CENTER<br>
+        카카오톡 @이뎀에<br>
+        EMAIL : Koreaf7777@naver.com<br>
+        운영시간 : 평일 09:00 ~ PM 18:00 (공휴일 제외)<br>
+        BANKING INFO<br>
+        예금주 : 김태연(이뎀에)<br>
+        농협 : 508-13-017151-4
+      </div>
+      <div class="footer-etc">
+        고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한<br>
+        PG사의 구매안전서비스를 이용하실 수 있습니다.<br>
+        <button
+          style="margin-top:7px; font-size:12px; color:#666; background:#eee; border:1px solid #ccc; border-radius:3px; padding:3px 8px;">서비스가입사실확인</button>
+      </div>
+    </div>
+    <div class="footer-bar">
+      회사소개 | 이용약관 | 개인정보처리방침 | 쇼핑몰제휴<br>
+      Copyright ⓒ 이뎀에[Makeyourself]. All rights reserved. Designed by Showdesign
+    </div>
+  </div>
+
+
+  <script>
+
+    // 공용 함수, 변수
+    const defaultInfo = {
+      email: "goodjob@see.you", last: "홍", first: "길동", nation: "+82", phone: "01012341234", zip: "41943",
+      address: "대구광역시 중구 중앙대로 366", detail: "반월당 센트럴 타워 9층, 10층"
+    };
+    defaultInfo.username = defaultInfo.last + defaultInfo.first;
+    const $ = id => document.getElementById(id);
+    let couponVisible = false;
+    let currentCoupon = 0;
+    document.getElementById('login-email').innerText = defaultInfo.email;
+    document.getElementById('login-username').innerText = defaultInfo.username + "님";
+
+
+    // 장바구니 샘플 데이터
+    let cartItems = [
+      { id: 1, name: "Adidas Waffle Shirt", options: ["FREE", "XL", "L"], option: "FREE", qty: 1, price: 62100 },
+      { id: 2, name: "OFOGS Original Ballcap", options: ["FREE", "네이비", "블랙"], option: "FREE", qty: 1, price: 53100 },
+      { id: 3, name: "Nike Air Max", options: ["260", "270", "280"], option: "270", qty: 1, price: 129000 },
+      { id: 4, name: "UNIQLO U Crew Neck", options: ["L", "XL", "XXL"], option: "L", qty: 3, price: 29900 },
+      { id: 5, name: "New Balance 993", options: ["260", "265", "270"], option: "265", qty: 1, price: 219000 },
+      { id: 6, name: "Birkenstock Boston", options: ["42", "43", "44"], option: "42", qty: 1, price: 115000 },
+      { id: 7, name: "Carhartt Cap", options: ["FREE", "네이비", "블랙"], option: "네이비", qty: 1, price: 35000 },
+      { id: 8, name: "ADER Error Bag", options: ["One Size", "Mini", "Big"], option: "One Size", qty: 1, price: 87000 },
+      { id: 9, name: "Supreme Tee", options: ["XL", "L", "M"], option: "XL", qty: 1, price: 95000 },
+      { id: 10, name: "Mmlg 1987 Hoodie", options: ["M", "L", "XL"], option: "M", qty: 2, price: 89000 }
+    ];
+
+    // 구매자 정보 세팅
+    function setBuyerInfo(useMember) {
+      if (useMember) {
+        $("buyer-last").value = defaultInfo.last;
+        $("buyer-first").value = defaultInfo.first;
+        $("buyer-nation").value = defaultInfo.nation;
+        $("buyer-phone").value = defaultInfo.phone;
+        $("buyer-zip").value = defaultInfo.zip;
+        $("buyer-address").value = defaultInfo.address;
+        $("buyer-detail").value = defaultInfo.detail;
+        ["buyer-last", "buyer-first", "buyer-nation", "buyer-phone", "buyer-zip", "buyer-address", "buyer-detail"]
+          .forEach(id => { $(id).readOnly = true; });
+      } else {
+        ["buyer-last", "buyer-first", "buyer-nation", "buyer-phone", "buyer-zip", "buyer-address", "buyer-detail"]
+          .forEach(id => {
+            $(id).value = '';
+            $(id).readOnly = false;
+          });
+      }
+    }
+
+    // 수령자 정보 토글
+    function handleRecipientCheck() {
+      const recipientCheck = $("recipient-info-check");
+      const recipientInput = $("recipient-input-wrap");
+      recipientCheck.addEventListener('change', function () {
+        if (this.checked) {
+          recipientInput.style.display = 'none';
+          // 입력칸 값 모두 비움
+          ['recipient-last', 'recipient-first', 'recipient-nation', 'recipient-phone', 'recipient-zip', 'recipient-address', 'recipient-detail']
+            .forEach(id => $(id).value = '');
+        } else {
+          recipientInput.style.display = 'block';
+        }
+      });
+    }
+
+    // 장바구니 렌더
+    function renderCart() {
+      const cartList = $("cart-list");
+      cartList.innerHTML = cartItems.map((item, i) => `
+        <div class="summary-item" data-id="${item.id}">
+          <div class="summary-thumb">이미지</div>
+          <div class="summary-info">
+            <div class="cart-name">${item.name}</div>
+            <div class="cart-opt">
+              옵션<span class="dot">·</span>
+              <select class="cart-opt-select" data-idx="${i}">
+                ${item.options.map(opt => `<option value="${opt}"${item.option === opt ? ' selected' : ''}>${opt}</option>`).join('')}
+              </select>
+            </div>
+            <div class="cart-qty">
+              수량<span class="dot">·</span>
+              <select class="cart-qty-select" data-idx="${i}">
+                ${[...Array(10).keys()].map(n => `<option value="${n + 1}"${item.qty == n + 1 ? ' selected' : ''}>${n + 1}</option>`).join('')}
+              </select>
+            </div>
+            <div class="cart-price">가격<span class="dot">·</span><b>${(item.price * item.qty).toLocaleString()}원</b></div>
+          </div>
+          <button class="remove-btn" title="삭제" data-idx="${i}">✕</button>
+        </div>
+      `).join('');
+      $("cart-count").innerText = cartItems.length;
+      updatePrice();
+    }
+
+    // 가격 합계/할인
+    function updatePrice() {
+      let subtotal = cartItems.reduce((a, b) => a + b.price * b.qty, 0);
+      let discount = Math.floor(subtotal * (currentCoupon / 100));
+      let total = subtotal - discount;
+      $("subtotal").innerText = subtotal.toLocaleString() + "원";
+      $("discount").innerText = discount.toLocaleString() + "원";
+      $("total").innerText = total.toLocaleString() + "원";
+    }
+
+    // 쿠폰 토글
+    function toggleCoupon() {
+      couponVisible = !couponVisible;
+      $("coupon-list").style.display = couponVisible ? 'block' : 'none';
+    }
+    // 쿠폰 적용
+    function applyCoupon(percent) {
+      currentCoupon = percent;
+      renderCart();
+      toggleCoupon();
+    }
+
+    // 한 번만 등록하는 이벤트 리스너
+    document.addEventListener('change', function (e) {
+      if (e.target.classList.contains('cart-qty-select')) {
+        let idx = e.target.dataset.idx;
+        cartItems[idx].qty = parseInt(e.target.value, 10);
+        renderCart();
+      }
+      if (e.target.classList.contains('cart-opt-select')) {
+        let idx = e.target.dataset.idx;
+        cartItems[idx].option = e.target.value;
+        renderCart();
+      }
+      if (e.target.id === "buyer-info-check") {
+        setBuyerInfo(e.target.checked);
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('remove-btn')) {
+        let idx = e.target.dataset.idx;
+        cartItems.splice(idx, 1);
+        renderCart();
+      }
+      // 쿠폰 영역 아닌 곳 클릭시 닫기
+      const coupon = document.querySelector('.coupon-section');
+      if (coupon && !coupon.contains(e.target)) {
+        $("coupon-list").style.display = 'none';
+        couponVisible = false;
+      }
+    });
+
+    // **초기 실행**
+    setBuyerInfo(true);
+    handleRecipientCheck();
+    renderCart();
+
+
+    const $recipientNation = document.getElementById('recipient-nation');
+    countryCodes.forEach(item => {
+      const opt = document.createElement('option');
+      opt.value = item.code;
+      opt.textContent = `${item.name} (${item.code})`;
+      $recipientNation.appendChild(opt);
+    });
+    $recipientNation.value = "+82";
+    $nation.value = "+82"; // 기본값 대한민국
+  </script>
+</body>
+
+</html>
