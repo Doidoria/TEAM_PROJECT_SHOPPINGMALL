@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/wrapper.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header-mobile.css">
+    <link rel="stylesheet" href="./css/footer-mobile.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <title>주문하기</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header">
+                <div class="logo">
+                    <a href="./main.html"><img src="./images/DAYFUL.png" alt="logo" style="width: 112px;"></a>
+                </div>
+                <nav>
+                    <ul class="top-gnb">
+                        <li><a href="">LOGIN</a></li>
+                        <li><a href="./join.html">JOIN</a></li>
+                        <li><a href="">ORDER</a></li>
+                        <li><a href="./cart.html">CART</a></li>
+                        <li><a href="">MY PAGE</a></li>
+                    </ul>
+                    <div class="Search-box">
+                        <input type="text" placeholder="검색">
+                        <a href=""><img src="./images/검색창-돋보기.png" alt="검색창-아이콘"></a>
+                        <a href=""><img src="./images/관심-아이콘.png" alt="관심-아이콘"></a>
+                    </div>
+                </nav>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="">NEW 10%</a></li>
+                    <li><a href="">BEST 50</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">SALE(50%)</a></li>
+                    <li><a href="">WOMAN</a>
+                        <ul class="sub-menu">
+                            <li><a href="">ALL</a></li>
+                            <li><a href="">OUTER</a></li>
+                            <li><a href="">TOP</a></li>
+                            <li><a href="">BOTTOM</a></li>
+                            <li><a href="">DRESS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">MAN</a>
+                        <ul class="sub-menu">
+                            <li><a href="">ALL</a></li>
+                            <li><a href="">OUTER</a></li>
+                            <li><a href="">SET UP</a></li>
+                            <li><a href="">TOP</a></li>
+                            <li><a href="">BOTTOM</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">ACC</a>
+                        <ul class="sub-menu">
+                            <li><a href="">BAG</a></li>
+                            <li><a href="">SHOES</a></li>
+                            <li><a href="">ETC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">COMMUNITY</a>
+                        <ul class="sub-menu">
+                            <li><a href="">NOTICE</a></li>
+                            <li><a href="">Q&A</a></li>
+                            <li><a href="">REVIEW</a></li>
+                            <li><a href="./servicecenter.html">SERVICE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="order-container">
+                <form class="order-form" autocomplete="off">
+                    <div class="account-row">
+                        <span>결제진행 이메일 계정:</span>
+                        <span>
+                            <span class="account-email" id="login-email"></span>
+                            <span id="login-username" class="qq1"></span>
+                        </span>
+                    </div>
+
+                    <div class="buyer-section">
+                        <div class="row-title1">배송지 주소</div>
+                        <div class="row-row">상품수령장소를 알려주세요.</div><br>
+                        <div class="row-title2">구매자</div>
+                        <div class="row-row">출고 이후에는 정보 수정이 불가합니다.</div><br>
+                        <div class="buyer-row-flex">
+                            <div class="row-title3">구매자정보</div>
+                            <label class="check-label">
+                                <span class="info-text">회원정보 사용</span>
+                                <input class="chc" type="checkbox" id="buyer-info-check" checked>
+                            </label>
+                        </div>
+                        <div class="row-row">*은 필수 입력입니다.</div>
+
+                        <div class="form-flex">
+                            <div class="input-wrap">
+                                <label for="buyer-last">성*</label>
+                                <input type="text" id="buyer-last" maxlength="8" readonly>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="buyer-first">이름*</label>
+                                <input type="text" id="buyer-first" maxlength="8" readonly>
+                            </div>
+                        </div>
+                    <br>
+                        <div class="row-title2">연락처</div>
+                        <div class="row-row2">휴대폰 번호가 아닌 자택 또는 안심번호 사용 시 배송 알림 전송이 제한될 수 있습니다.</div>
+                        <div class="nationphone-row">
+                            <select style="min-width: 30px; height: 21px; text-align: center;"
+                                id="buyer-nation"></select>
+                            <input type="tel" id="buyer-phone" maxlength="11" readonly>
+                        </div>
+                        <div class="zip-row">
+                            <input type="text" id="buyer-zip" readonly>
+                            <button type="button">검색</button>
+                        </div>
+                        <br>
+                        <div class="row-row2">주소</div>
+                        <input type="text" id="buyer-address" class="full-input" readonly>
+
+                        <div style="margin-top: 10px;" class="row-row2">상세주소</div>
+                        <input type="text" id="buyer-detail" class="full-input" readonly>
+                    </div>
+
+                    <!-- 수령자 정보 박스 -->
+                    <div class="recipient-section" style="margin-top:26px;">
+                        <div class="row-title2">수령자</div>
+                        <div class="row-row">*은 필수 입력입니다.</div>
+                    <br>
+                        <div class="buyer-row-flex">
+                            <div class="row-title3">수령자정보</div>
+                            <label class="check-label">
+                                <span class="info-text">구매자정보 사용</span>
+                                <input class="chc" type="checkbox" id="recipient-info-check" checked>
+                            </label>
+                        </div>
+                        <div class="row-row">*은 필수 입력입니다.</div>
+                        <div id="recipient-input-wrap" style="display:none; margin-top:12px;">
+                            <div class="form-flex">
+                                <div class="input-wrap">
+                                    <label for="recipient-last">성*</label>
+                                    <input type="text" id="recipient-last">
+                                </div>
+                                <div class="input-wrap">
+                                    <label for="recipient-first">이름*</label>
+                                    <input type="text" id="recipient-first">
+                                </div>
+                            </div>
+                        <br>
+                            
+                            <div class="row-title2">연락처</div>
+                            <div class="row-row2">휴대폰 번호가 아닌 자택 또는 안심번호 사용 시 배송 알림 전송이 제한될 수 있습니다.</div>
+                            <div class="nationphone-row">
+                                <select style="min-width: 30px; height: 21px; text-align: center;"
+                                    id="recipient-nation"></select>
+                                <input type="tel" id="recipient-phone" maxlength="20" placeholder="휴대전화">
+                            </div>
+                            <div class="zip-row">
+                                <input type="text" id="recipient-zip" placeholder="우편번호">
+                                <button type="button">검색</button>
+                            </div>
+                            <div class="row-row2">주소</div>
+                            <input type="text" id="recipient-address" class="full-input" placeholder="주소">
+                            <div style="margin-top: 10px;" class="row-row2">상세주소</div>
+                            <input type="text" id="recipient-detail" class="full-input" placeholder="상세주소 (아파트명, 호수 등)">
+                        </div>
+                    </div>
+
+                    <div class="pay-section-title">결제하기</div>
+                    <div style="font-size:13px; color:#222; margin-bottom:6px;">결제 방식을 선택해주세요.</div>
+                    <div class="pay-type-row">
+                        <label><input type="radio" name="paytype" checked> 네이버 간편결제</label>
+                        <label><input type="radio" name="paytype"> 카드 간편결제</label>
+                        <label><input type="radio" name="paytype"> 무통장입금</label>
+                    </div>
+                </form>
+
+                <!-- 주문 요약 박스 (오른쪽) -->
+                <div class="order-summary">
+                    <div class="summary-title">주문 요약<br><span id="cart-count">0</span>개의 상품</div>
+                    <div class="summary-list" id="cart-list"></div>
+                    <div class="coupon-section" style="position:relative;">
+                        <button class="coupon-btn" type="button" onclick="toggleCoupon()">쿠폰 선택</button>
+                        <div class="coupon-options" id="coupon-list">
+                            <div onclick="applyCoupon(10)">10% 쿠폰</div>
+                            <div onclick="applyCoupon(20)">20% 쿠폰</div>
+                            <div onclick="applyCoupon(0)">적용 취소</div>
+                        </div>
+                    </div>
+                    <div class="price-list">
+                        <div class="price-row"><span>소계</span><span id="subtotal">0원</span></div>
+                        <div class="price-row"><span>쿠폰할인</span><span id="discount">0원</span></div>
+                        <div class="price-row total-row"><span>총 결제금액</span><span id="total">0원</span></div>
+                    </div>
+                    <button class="pay-btn">결제하기</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footinfo">
+                <ul class="company">
+                    <li><span>COMPANY : 데이풀</span><span>대표이사 : 홍길동</span></li>
+                    <li>사업자등록번호 : 250-81-017751 사업자정보확인 통신판매업신고 : 제 2025-대구-0710 호</li>
+                    <li>개인정보 보호책임자 : 홍길동</li>
+                </ul>
+                <span>주소 : 대구 중구 중앙대로 366 반월센트럴타워 9,10층 데이풀</span>
+            </div>
+            <div class="footcall">
+                <ul>
+                    <li><h2>CS CENTER</h2></li>
+                    <li>카카오 채널 상담</li>
+                    <li>EMAIL : Koreait777@naver.com</li>
+                    <li>평일 (월 ~ 금) AM 09:00 ~ PM 18:00 (공휴일 제외)</li>
+                </ul>
+                <ul>
+                    <li><b>BANKING INFO</b></li>
+                    <li>IM뱅크 : 508-13-017151-4</li>
+                    <li>예금주 : 홍길동(데이풀)</li>
+                </ul>
+            </div>
+            <div class="footre">
+                <div class="f-sns">
+                    <a href=""><img src="./images/카카오톡.png" alt="카카오톡"></a>
+                    <a href=""><img src="./images/인스타.png" alt="인스타"></a>
+                    <a href=""><img src="./images/페이스북.png" alt="페이스북"></a>
+                </div>
+                <ul class="f-service">
+                    <li>고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한</li>
+                    <li>PG에스크로 구매안전서비스를 이용하실 수 있습니다.</li>
+                    <li><a href="" style="color:#ffffff">서비스가입사실확인</a></li>
+                </ul>
+            </div>
+        </footer>
+        <div class="bottom-footer">
+            <ul class="f-menu">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보 처리방침</a></li>
+                <li><a href="">제보센터</a></li>
+            </ul>
+            <span style="font-size:.8rem;">Copyright © 데이풀(Makeyourself). All rights reserved. Designed by Showdesign</span>
+        </div>
+    </div>
+
+    <script src="./JS/order.js"></script>
+</body>
+
+</html>
