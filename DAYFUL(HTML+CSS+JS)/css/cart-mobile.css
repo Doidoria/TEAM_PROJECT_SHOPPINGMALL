@@ -1,0 +1,76 @@
+@media (max-width:430px){
+    main{
+        max-width: 430px;
+        padding: 15px;
+    }
+    h3{
+        display:none;
+    }
+    h2 {
+    margin-bottom: 40px;
+    }
+    .tab-menu {
+        width: 100%;
+        height: auto;
+        font-size:.75rem;
+        align-items: center;
+    }
+    h2{
+        font-size:18px;
+        margin-top: 30px;
+    }
+    th,td{
+        font-size:10px;
+        padding: 5px;
+    }
+    .image-wrapper {
+        gap: 2px;
+    }
+    .image-wrapper img{
+        width:40px;
+    }
+    .quantity>input{
+        width: 30px;
+        height: 20px;
+        font-size: .65rem;
+        margin-bottom: 1px;
+    }
+    .change-quantity{
+        font-size: .65rem;
+        white-space: nowrap;
+        width: 30px;
+        text-align: center;
+        padding: 0;
+    }
+    .image-wrapper>input{
+        width: 9px;
+    }
+    .btn-group{
+        font-size: .8rem;
+        white-space: nowrap;
+    }
+    .btn-group>button{
+        font-size: .7rem;
+    }
+    .price>td{
+        font-size:15px;
+    }
+    .order-buttons a{
+        padding: 5px;
+        font-size:12px;
+    }
+    .npay-button{
+        white-space: nowrap;
+
+    }
+    .kakaopay-button{
+        white-space: nowrap;
+    }
+    .order-buttons a:nth-child(1) {
+        padding: 5px 35px;
+    }
+
+    .order-buttons a:nth-child(2) {
+        padding: 5px 35px;
+    }
+}

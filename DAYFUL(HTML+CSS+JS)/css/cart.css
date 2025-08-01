@@ -1,0 +1,277 @@
+main {
+    padding: 100px 200px;
+    position: relative;
+}
+
+h3 {
+    font-size: small;
+    text-align: right;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.tab-menu {
+    display: flex;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    width: 500px;
+}
+
+.tab-menu div {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.tab-menu div:first-child {
+    border-right: 1px solid #e4e2e8;
+    border-bottom: none;
+    background-color: #f8f8f8;
+}
+
+.main-contents th {
+    background-color: #f8f8f8;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    vertical-align: middle;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+tr {
+    border-top: 1px solid #ccc;
+}
+
+
+.product-info {
+    line-height: 1.5;
+}
+
+.product_img {
+    width: 80px;
+    height: 96px;
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.image-wrapper img {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+tbody th:nth-child(1) {
+    background: none;
+}
+
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="number"] {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.change-quantity {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.main-contents tbody tr td:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-left: 0;
+}
+
+
+
+.main-contents tr td:nth-child(1),
+.main-contents tr th:nth-child(1) {
+    text-align: left;
+}
+
+.main-contents tfoot tr:nth-child(1) {
+    background-color: #f8f8f8;
+}
+
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+    font-size: 14px;
+
+}
+
+.btn-group>button {
+    font-size: 14px;
+}
+
+.btn-group>button:nth-of-type(1) {
+    background: gray;
+    color: white;
+    border: none;
+}
+
+.btn-group>button:nth-of-type(2) {
+    border: 1px solid #ccc;
+}
+
+.total {
+    margin-top: 60px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+
+}
+
+.price>td {
+    font-size: large;
+}
+
+.total>tbody>tr>td:nth-child(3) {
+    color: rgb(173, 9, 9);
+}
+
+
+.order-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.order-buttons a {
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.order-buttons a:nth-child(1) {
+    background: gray;
+    width: 140px;
+    height: 40px;
+}
+
+.order-buttons a:nth-child(2) {
+    background: rgb(171, 171, 171);
+    width: 140px;
+    height: 40px;
+}
+
+
+.pay {
+    margin-top: 10px;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+
+.npay-left,
+.kakaopay-left {
+    padding-right: 10px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.npay-right,
+.kakaopay-right {
+    text-align: right;
+}
+
+.npay-label {
+    color: #03c75a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.npay-desc {
+    color: #444;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.npay-button {
+    margin-left: 0;
+    background-color: #00DE5A;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.kakaopay-button {
+
+    margin-left: 0;
+    background-color: #ffde00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.npay-button .icon {
+    background: white;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

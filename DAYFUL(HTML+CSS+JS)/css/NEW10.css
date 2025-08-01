@@ -1,0 +1,54 @@
+.main-new10{
+    width: 1775px;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    position: relative;
+}
+.m-new10j{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.m-new10-img{
+    display: flex;
+    gap:30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+.m-n10-info{
+    font-family: 'NanumGothicBlod';
+    font-weight: bold;
+}
+.m-n10-img{
+    max-width: 419px;
+    /* height: 510px; */
+}
+.n10-watchlist{
+    position: absolute;
+    padding-left:360px;
+    padding-top: 20px;
+}
+.n10-watchlist>button{
+    cursor: pointer;
+}
+.name{
+    width: 419px;
+    margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    font-size: 1.2rem;
+}
+.price>span{
+    font-size: 1.3rem;
+    padding-right: 7px;
+}
+.price>span:nth-child(1){
+    color: red;
+}
+.price>span:nth-child(2){
+    font-weight:normal;
+    text-decoration:line-through;
+}

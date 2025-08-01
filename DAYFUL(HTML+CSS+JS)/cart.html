@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/wrapper.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header-mobile.css">
+    <link rel="stylesheet" href="./css/footer-mobile.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/cart-mobile.css">
+    <title>장바구니</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header">
+                <div class="logo">
+                    <a href="./main.html"><img src="./images/DAYFUL.png" alt="logo" style="width: 112px;"></img></a>
+                </div>
+                <nav>
+                    <ul class="top-gnb">
+                        <li><a href="">LOGIN</a></li>
+                        <li><a href="./join.html">JOIN</a></li>
+                        <li><a href="">ORDER</a></li>
+                        <li><a href="./cart.html">CART</a></li>
+                        <li><a href="">MY PAGE</a></li>
+                    </ul>
+                    <div class="Search-box">
+                        <input type="text" placeholder="검색">
+                        <a href=""><img src="./images/검색창-돋보기.png" alt="검색창-아이콘"></a>
+                        <a href=""><img src="./images/관심-아이콘.png" alt="관심-아이콘"></a>
+                    </div>
+                </nav>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="">NEW 10%</a></li>
+                    <li><a href="">BEST 50</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">SALE(50%)</a></li>
+                    <li><a href="">WOMAN</a>
+                        <ul class="sub-menu">
+                            <li><a href="">ALL</a></li>
+                            <li><a href="">OUTER</a></li>
+                            <li><a href="">TOP</a></li>
+                            <li><a href="">BOTTOM</a></li>
+                            <li><a href="">DRESS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">MAN</a>
+                        <ul class="sub-menu">
+                            <li><a href="">ALL</a></li>
+                            <li><a href="">OUTER</a></li>
+                            <li><a href="">SET UP</a></li>
+                            <li><a href="">TOP</a></li>
+                            <li><a href="">BOTTOM</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">ACC</a>
+                        <ul class="sub-menu">
+                            <li><a href="">BAG</a></li>
+                            <li><a href="">SHOES</a></li>
+                            <li><a href="">ETC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">COMMUNITY</a>
+                        <ul class="sub-menu">
+                            <li><a href="">NOTICE</a></li>
+                            <li><a href="">Q&A</a></li>
+                            <li><a href="">REVIEW</a></li>
+                            <li><a href="./servicecenter.html">SERVICE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h3>홈 > 장바구니</h3>
+            <h2>장바구니</h2>
+
+            <div class="tab-menu">
+                <div><strong>국내배송상품 (1)</strong></div>
+                <div>해외배송상품 (0)</div>
+            </div>
+
+            <table class="main-contents">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="image-wrapper"><input type="checkbox"><span>이미지</span></div>
+                        </th>
+                        <th>상품정보</th>
+                        <th>수량</th>
+                        <th>상품금액</th>
+                        <th>할인금액</th>
+                        <th>적립금</th>
+                        <th>배송구분</th>
+                        <th>배송비</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="product-image" >
+                            <div class="image-wrapper">
+                                <input type="checkbox">
+                                <a href="">
+                                    <img src="./images/NEW10-1.png"alt="상품 이미지">
+                                </a>
+                            </div>
+                        </th>
+                        <td>
+                            <ul class="product-info">
+                                <li><strong>[남여공용] 프렌드 밴딩 카고 버뮤다 팬츠 (5 color)</strong></li>
+                                <li>[옵션: 그레이/FREE]</li>
+                                <li class="displaynone">(1개)</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="quantity">
+                                <input type="number" value="1" min="1" />
+                                <button class="change-quantity">변경</button>
+                            </div>
+                        </td>
+                        <td>62,100원</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>기본배송</td>
+                        <td>무료</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="10">[기본배송]</td>
+                    </tr>
+                    <tr>
+                        <td colspan="10">할인 적용 금액은 주문서작성의 결제예정금액에서 확인 가능합니다.</td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="btn-group">
+                <strong>선택상품을</strong>
+                <button>X 삭제하기</button>
+                <button>해외배송상품 장바구니로 이동</button>
+            </div>
+
+            <table class="total">
+                <thead>
+                    <tr>
+                        <th><strong>총 상품금액</strong></th>
+                        <th><strong>총 배송비</strong></th>
+                        <th><strong>결제예정금액</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="price">
+                        <td><strong>62,100</strong>원</td>
+                        <td><strong>+0</strong>원</td>
+                        <td><strong>=62,100</strong>원</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="order-buttons">
+                <a href="./order.html">전체상품주문</a>
+                <a>선택상품주문</a>
+            </div>
+            
+            <table class="pay">
+                <tr class="npay">
+                    <td class="npay-left">
+                        <div class="npay-label">NAVER</div>
+                        <div class="npay-desc">
+                            네이버ID로 간편구매<br>
+                            네이버페이
+                        </div>
+                    </td>
+                    <td class="npay-right">
+                        <button class="npay-button">
+                            <span class="icon">N</span>
+                            pay 구매
+                        </button>
+                    </td>
+                </tr>
+                <tr class="kakaopay">
+                    <td class="kakaopay-left">
+                        <div class="kakaopay-label">kakao</div>
+                        <div class="npay-desc">
+                            <strong>톡 체크아웃</strong>
+                        </div>
+                    </td>
+                    <td class="kakaopay-right">
+                        <button class="kakaopay-button">
+                            <span class="kakao">💬</span>
+                            간편구매
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </main>
+        
+        <footer>
+            <div class="footinfo">
+                <ul class="company">
+                    <li><span>COMPANY : 데이풀</span><span>대표이사 : 홍길동</span></li>
+                    <li>사업자등록번호 : 250-81-017751 사업자정보확인 통신판매업신고 : 제 2025-대구-0710 호</li>
+                    <li>개인정보 보호책임자 : 홍길동</li>
+                </ul>
+                <span>주소 : 대구 중구 중앙대로 366 반월센트럴타워 9,10층 데이풀</span>
+            </div>
+            <div class="footcall">
+                <ul>
+                    <li><h2>CS CENTER</h2></li>
+                    <li>카카오 채널 상담</li>
+                    <li>EMAIL : Koreait777@naver.com</li>
+                    <li>평일 (월 ~ 금) AM 09:00 ~ PM 18:00 (공휴일 제외)</li>
+                </ul>
+                <ul>
+                    <li><b>BANKING INFO</b></li>
+                    <li>IM뱅크 : 508-13-017151-4</li>
+                    <li>예금주 : 홍길동(데이풀)</li>
+                </ul>
+            </div>
+            <div class="footre">
+                <div class="f-sns">
+                    <a href=""><img src="./images/카카오톡.png" alt="카카오톡"></a>
+                    <a href=""><img src="./images/인스타.png" alt="인스타"></a>
+                    <a href=""><img src="./images/페이스북.png" alt="페이스북"></a>
+                </div>
+                <ul class="f-service">
+                    <li>고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한</li>
+                    <li>PG에스크로 구매안전서비스를 이용하실 수 있습니다.</li>
+                    <li><a href="" style="color:#ffffff">서비스가입사실확인</a></li>
+                </ul>
+            </div>
+        </footer>
+        <div class="bottom-footer">
+            <ul class="f-menu">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보 처리방침</a></li>
+                <li><a href="">제보센터</a></li>
+            </ul>
+            <span style="font-size:.8rem;">Copyright © 데이풀(Makeyourself). All rights reserved. Designed by Showdesign</span>
+        </div>
+    </div>
+
+    <script src="./JS/main.js"></script>
+</body>
+</html>

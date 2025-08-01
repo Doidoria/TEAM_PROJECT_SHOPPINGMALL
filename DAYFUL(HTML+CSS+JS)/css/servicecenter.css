@@ -1,0 +1,203 @@
+    .container {
+      display: flex;
+      max-width: 1664px;
+      /* 최대 폭 */
+      width: 100%;
+      /* 창 크기에 맞게 줄어듦 */
+      flex-wrap: wrap;
+      /* 창이 좁아지면 아래로 떨어지게 */
+      margin: 0 auto;
+      border: 1px solid #000;
+    }
+
+    /* .container {
+      display: flex;
+      width: 1664px;
+      min-height: 1726px;
+      margin: 0 auto;
+      border: 1px solid #000;
+    } */
+
+    /* --- 사이드바 --- */
+    .sidebar {
+      width: 240px;
+      border-right: 1px solid #000;
+      padding: 30px 20px;
+      background: #fff;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .btn-inquiry-list {
+      display: inline-block;
+      background: #000;
+      border: 1px solid black;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 10px;
+      margin-bottom: 30px;
+      /* cursor: pointer; */
+    }
+
+    .sidebar-section {
+      margin-bottom: 30px;
+    }
+
+    /* 나의쇼핑정보, MyPage, 고객센터, INFO */
+    .sidebar-section h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-section ul {
+      list-style: none;
+    }
+
+    /* .siderbar-section h3 > (나의쇼핑정보, MyPage, 고객센터, INFO) */
+    .sidebar-section li {
+      font-size: 15px;
+      margin-bottom: 15px;
+      margin: 10px;
+      border-bottom: 1px solid #dddddd60;
+      /* 바텀에 보더줘서 밑줄느낌으로 눈에 잘보이게 */
+
+      padding: 10px 10px;
+      /* 둘다 넣어서 글이 잘보이도록 함.*/
+      /* cursor: pointer; */
+    }
+
+    .btn-inquiry-start {
+      margin-top: 20px;
+      display: inline-block;
+      font-size: 13px;
+      padding: 6px 10px;
+      border: 1px solid #000;
+      background: black;
+      /* color: white; */
+      /* cursor: pointer; */
+    }
+
+    /* --- 컨텐츠 --- */
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    /* 베이지색 top 전체박스*/
+    .top-boxes {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 30px;
+    }
+
+    /* Newbie, 나의쿠폰, 상품 리뷰 */
+    .top-box {
+      flex: 1;
+      background: #e7e0da;
+      text-align: right;
+      padding: 20px 20px;
+
+    }
+
+    /* 베이지색 top박스*/
+    .top-box .title {
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    /* -, 2, 10 */
+    .top-box .number {
+      font-size: 28px;
+      font-weight: bold;
+      /* display: flex; */
+      /* justify-content: space-between; */
+    }
+
+    .npay {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .notice {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    /* FQA li */
+    .faq-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+
+    }
+
+    .faq-table tr {
+      border-bottom: 1px solid #ddd;
+
+    }
+
+    .faq-table td {
+      padding: 30px 8px;
+      /* gap: 10px; */
+    }
+
+    .faq-table td.category {
+      width: 100px;
+      color: #888;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .footer-msg {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .btn-bottom-inquiry {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      background: #000;
+      border: 2px solid black;
+      color: #fff;
+      padding: 10px 20px;
+      display: inline-block;
+      /* cursor: pointer; */
+    }
+    
+     @media (max-width: 760px) {
+        body{
+            overflow-x: hidden;
+            width:100%;
+            max-width: 760px;
+            min-width: 360px;
+            margin: 0;
+         }
+
+         .container {
+            border:none;
+            flex-direction: column;
+            padding: 0;
+            /* 위아래 정렬로 변경 */
+         }
+
+         .sidebar {
+            width: 100%;
+            flex: none;
+            margin-right: 10px;
+            /* border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000; */
+           
+            
+         }
+      
+      .content{
+         display: none;
+      }
+   }
