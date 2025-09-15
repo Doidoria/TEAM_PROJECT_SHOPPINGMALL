@@ -2,6 +2,7 @@
 # TEAM_PROJECT
 ---
 https://www.miricanvas.com/v2/design2/v/3e3d536b-37cf-418f-bad8-db4ce504801e?mode=templateshare
+https://www.miricanvas.com/v2/design2/v/cd043c70-ac78-4f62-badb-c0ad5254c046?mode=templateshare
 <table>
   <caption><h2>PART-History</h2></caption>
         <tr>
