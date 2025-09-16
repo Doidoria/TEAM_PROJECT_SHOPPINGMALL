@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/wrapper.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/header-mobile.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/footer-mobile.css">
+    <link rel="stylesheet" href="./css/main-mobile.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <script src="./JS/main.js" defer></script>
+
+    <title>하루를 가득 채우다 DAYFUL</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header">
+                <span>배송지연 공지</span>
+            </div>
+            <nav>
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <div class="menu-btn"><span class="mb-center"></span></div>
+                </a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <div class="off-logo"><img src="./images/DAYFUL.png" alt="로고"></div>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="main-menu">
+                            <li><a href="">추천 제품</a></li>
+                            <li><a href="">신상 제품</a>
+                            <li><a href="">베스트</a></li>
+                            <li><a href="">이벤트</a></li>
+                            <li><a href="">스타일가이드</a></li>
+                            <li><a href="">커뮤니티</a></li>
+                        </ul>
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown">Dropdown button
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href=""><img src="./images/DAYFUL.png" alt="로고"></a>
+                </div>
+                <div class="submenu-btn-wrap">
+                    <div class="Search-box">
+                        <input type="text" placeholder="검색">
+                        <a href=""><img src="./images/Search.png" alt="검색창-아이콘" style="width: 15px;"></a>
+                    </div>
+                    <div class="login">
+                        <a href=""><img src="./images/login-icon.png" alt="로그인-아이콘"
+                                style="width: 27px;height: 27px;"></a>
+                    </div>
+                    <div class="cart">
+                        <a href=""><img src="./images/Cart.png" alt="장바구니-아이콘" style="width: 27px;height:30px;"></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div class="main-slide">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="txt-wrap">
+                                    <span style="color:#54443f">망설이면 품절!</span>
+                                    <h2 style="color:#54443f">2025년 봄<br>블랙프라이데이</h2>
+                                    <p style="color:#54443f">연애시작 계절 봄!<br>득템하고 연애성공!</p>
+                                    <a href="" style="border:1px solid #54443f"><span style="color:#54443f">VIEW
+                                            MORE</span></a>
+                                </div>
+                                <a href="javascript:void(0)"><img src="./images/main-silde-1.jpg"
+                                        alt="메인 슬라이드 이미지1"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="txt-wrap">
+                                    <span>망설이면 품절!</span>
+                                    <h2 style="color:rgb(10, 119, 105)">2025년 SUMMER<br>블랙프라이데이</h2>
+                                    <p>시원한 여름을 쾌적하게 즐기기위해<br>지금이 득템할 타이밍!</p>
+                                    <a href=""><span>VIEW MORE</span></a>
+                                </div>
+                                <a href="javascript:void(0)"><img src="./images/main-silde-2.jpg"
+                                        alt="메인 슬라이드 이미지2"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="txt-wrap">
+                                    <span>한여름 무더위!</span>
+                                    <h2 style="letter-spacing: -2px;">2025년 썸머 빅세일<br>1+1 세트 ~30% 특가</h2>
+                                    <p>한여름 무더위 날려버릴<br>절호의 기회! 놓치지 마세요!</p>
+                                    <a href=""><span>VIEW MORE</span></a>
+                                </div>
+                                <a href="javascript:void(0)"><img src="./images/main-silde-3.png"
+                                        alt="메인 슬라이드 이미지3"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="txt-wrap">
+                                    <span style="color:rgb(230, 215, 201)">망설이면 품절!</span>
+                                    <h2>2025년 가을<br>블랙프라이데이</h2>
+                                    <p style="color:rgb(230, 215, 201)">한 껏 멋부릴 꾸안꾸 계절!<br>지금이 자기관리 타이밍!</p>
+                                    <a href="" style="border:1px solid rgb(230, 215, 201)"><span
+                                            style="color:rgb(230, 215, 201)">VIEW MORE</span></a>
+                                </div>
+                                <a href="javascript:void(0)"><img src="./images/main-silde-4.jpg"
+                                        alt="메인 슬라이드 이미지4"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="txt-wrap">
+                                    <span style="color:rgb(230, 215, 201)">망설이면 품절!</span>
+                                    <h2>2025년 겨울<br>블랙프라이데이</h2>
+                                    <p style="color:rgb(230, 215, 201)">추운 겨울을 따뜻하게 보내기위해<br>지금이 득템할 타이밍!</p>
+                                    <a href="" style="border:1px solid rgb(230, 215, 201)"><span
+                                            style="color:rgb(230, 215, 201)">VIEW MORE</span></a>
+                                </div>
+                                <a href="javascript:void(0)"><img src="./images/main-silde-5.jpg"
+                                        alt="메인 슬라이드 이미지5"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-btn">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper-pgt">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="scroll-menu-wrap">
+                <div id="scroll-menu">
+                    <a href=""><img src="./images/ic_angle_up.png" style="margin-bottom: 6px;" alt="스크롤UP"></a>
+                    <a href=""><img src="./images/ic_angle_down.png" alt="스크롤DOWN"></a>
+                    <a href=""><img src="./images/ic_kakao_talk.png" style="width: 60px;" alt="카카오톡"></a>
+                </div>
+            </div>
+            <section class="section-wrap">
+                <div class="tabs-wrap">
+                    <div class="tabs-nav">
+                        <h1>Product</h1>
+                        <ul class="tabs-list">
+                            <li class="active"><a href="javascript:">추천제품</a></li>
+                            <li class><a href="javascript:">신상제품</a></li>
+                            <li class><a href="">베스트</a></li>
+                            <li class><a href="">이벤트</a></li>
+                        </ul>
+                    </div>
+                    <div id="tabs-1" class="tab-box active">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image1.png" alt="추천 상품 이미지1">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image2.png" alt="추천 상품 이미지2">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image3.png" alt="추천 상품 이미지3">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image4.png" alt="추천 상품 이미지4">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image5.png" alt="추천 상품 이미지5">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image6.png" alt="추천 상품 이미지6">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image7.png" alt="추천 상품 이미지7">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image8.png" alt="추천 상품 이미지8">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image9.jpg" alt="추천 상품 이미지9">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/good_image10.png" alt="추천 상품 이미지10">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>추천</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pgt">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabs-2" class="tab-box">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image1.png" alt="NEW 상품 이미지1">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image2.png" alt="NEW 상품 이미지2">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image3.png" alt="NEW 상품 이미지3">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image4.png" alt="NEW 상품 이미지4">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image5.png" alt="NEW 상품 이미지5">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image6.png" alt="NEW 상품 이미지6">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image7.png" alt="NEW 상품 이미지7">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image8.jpg" alt="NEW 상품 이미지8">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image9.png" alt="NEW 상품 이미지9">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- <a class="tab-slide-wrap" href="">
+                                        <img src="./images/new_image10.png" alt="NEW 상품 이미지10">
+                                        <div class="tab-txt-wrap">
+                                            <span>미등록</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">0</span>
+                                                <span class="pro-customPrice">0</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>NEW</span>
+                                            </div>
+                                        </div>
+                                    </a> -->
+                                </div>
+                            </div>
+                            <div class="swiper-pgt">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabs-3" class="tab-box">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image1.png" alt="베스트 상품 이미지1">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image2.png" alt="베스트 상품 이미지2">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image3.png" alt="베스트 상품 이미지3">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image4.png" alt="베스트 상품 이미지4">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image5.png" alt="베스트 상품 이미지5">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image6.png" alt="베스트 상품 이미지6">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image7.png" alt="베스트 상품 이미지7">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image8.png" alt="베스트 상품 이미지8">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image9.jpg" alt="베스트 상품 이미지9">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="tab-slide-wrap" href="">
+                                        <img src="./images/best_image10.png" alt="베스트 상품 이미지10">
+                                        <div class="tab-txt-wrap">
+                                            <span>포어 제로 오일 컨트롤 선스틱</span>
+                                            <div class="pro-price-wrap">
+                                                <span class="pro-price">19,800</span>
+                                                <span class="pro-customPrice">25,000</span>
+                                            </div>
+                                            <div class="tab-title">
+                                                <span>BEST</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pgt">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-wrap">
+                <div class="Skin-type-wrap">
+                    <div class="Skin-type">
+                        <dl>
+                            <dt class="scroll-fade">
+                                무엇을 쓰셔야할지 잘 모르시겠다고요?<br>본인 타입에 맞는 제품을 확인하세요
+                            </dt>
+                            <dd>
+                                <p class="scroll-fade">DAYFUL은 타입별 제품들을 쉽게 확인하고<br>원하는 제품을 쉽게 구입할 수 있도록 도와드립니다.</p>
+                                <p class="second scroll-fade">기초부터 시작해 하루 가득 채워질 그날까지 DAYFUL과 함께하세요. </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            <section class="section-wrap">
+                <div class="Skin-type-sel-wrap">
+                    <ul>
+                        <li>
+                            <a class="Skin-type-sel" href="">
+                                <div class="sel-img-wrap">
+                                    <span class="sel-atag">건성 제품 보러가기</span>
+                                    <img src="./images/건성.jpg" alt="건성">
+                                </div>
+                                <div class="sel-txt-wrap">
+                                    <strong>건성</strong>
+                                    <small>모공이 작고 피부의 수분 증발이 빨라 항상 건조하고 윤기가 없습니다.</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="Skin-type-sel" href="">
+                                <div class="sel-img-wrap">
+                                    <span>지성 제품 보러가기</span>
+                                    <img src="./images/지성.jpg" alt="지성">
+                                </div>
+                                <div class="sel-txt-wrap">
+                                    <strong>지성</strong>
+                                    <small>모공이 크고 피지 분비가 많아 여드름, 블랙헤드 등의 피부 트러블이 잦습니다.</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="Skin-type-sel" href="">
+                                <div class="sel-img-wrap">
+                                    <span>복합성 제품 보러가기</span>
+                                    <img src="./images/복합성.jpg" alt="복합성">
+                                </div>
+                                <div class="sel-txt-wrap">
+                                    <strong>복합성</strong>
+                                    <small>건성 피부와 지성 피부가 복합적으로 나타나는 피부입니다.</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section-wrap">
+                <div class="style-guide-wrap">
+                    <div class="style-guide-title">
+                        <h1>Style Guide</h1>
+                        <span>원하는 스타일 맞춤 상품을<br>지금 DAYFUL에서 확인하고 찾아가세요</span>
+                        <a href=""><span>바로가기</span></a>
+                    </div>
+                    <div class="style-guide-info">
+                        <div class="sg-wrap">
+                            <div class="sg-video">
+                                <video
+                                    src="https://player.vimeo.com/progressive_redirect/playback/1048420243/rendition/540p/file.mp4?loc=external&amp;signature=4467b80a4a7c9a161948fc3fa81ed51789f108a02dc428f7e87d22f35a636b21"
+                                    muted playsinline autoplay loop poster style="border-radius: 20px;">
+                                </video>
+                            </div>
+                            <div class="sg-txt">
+                                <strong>Pore-Zero Care</strong>
+                                <p>하루 종일 번들거림 없이 깔끔하게, 피지 & 모공 잡는 보송 산뜻 스킨케어</p>
+                                <a href=""><span>더 알아보기 &nbsp→</span></a>
+                            </div>
+                        </div>
+                        <div class="sg-wrap">
+                            <div class="sg-video">
+                                <video
+                                    src="https://player.vimeo.com/progressive_redirect/playback/962952304/rendition/540p/file.mp4?loc=external&signature=48edac2cc4d7a14dc61bcf410c77fc68ec41707021eee8a803524cc198ac2a28"
+                                    muted playsinline autoplay loop poster style="border-radius: 20px;">
+                                </video>
+                            </div>
+                            <div class="sg-txt">
+                                <strong>Natural Cover Duo</strong>
+                                <p>티 안나게 잘생겨지고 싶은 남자들을 위한 치트키, 타고난 듯 좋은 피부처럼 감쪽같은 결점 커버</p>
+                                <a href=""><span>더 알아보기 &nbsp→</span></a>
+                            </div>
+                        </div>
+                        <div class="sg-wrap">
+                            <div class="sg-video">
+                                <video
+                                    src="https://player.vimeo.com/progressive_redirect/playback/879693682/rendition/540p/file.mp4?loc=external&signature=fc446f5512aaa8f199034b34483d00b95682eae53ec7c379bd1c73281c467248"
+                                    muted playsinline autoplay loop poster style="border-radius: 20px;">
+                                </video>
+                            </div>
+                            <div class="sg-txt">
+                                <strong>Hair Styling SET</strong>
+                                <p>완벽한 헤어 스타일링은 남자들의 자존심, 볼륨, 컬링, 고정까지 더 쉽고 빠르게 완성</p>
+                                <a href=""><span>더 알아보기 &nbsp→</span></a>
+                            </div>
+                        </div>
+                        <div class="sg-wrap">
+                            <div class="sg-video">
+                                <video
+                                    src="https://player.vimeo.com/progressive_redirect/playback/887108723/rendition/540p/file.mp4?loc=external&signature=14e5cc972c4070fe5bae4be2d45d18b1f4cbc6f5e419db466589363d1f82c961"
+                                    muted playsinline autoplay loop poster style="border-radius: 20px;">
+                                </video>
+                            </div>
+                            <div class="sg-txt">
+                                <strong>Perfume Style Line Up</strong>
+                                <p>향수 붓는 덱스가 추천하는 향과 스타일링, 일렁이는 향기로 칠하는 첫인상 오브제 퍼퓸</p>
+                                <a href=""><span>더 알아보기 &nbsp→</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-wrap">
+                <div class="footinfo">
+                    <img src="./images/DAYFUL.png" alt="logo">
+                    <ul class="company">
+                        <li><span>COMPANY : 데이풀</span><span>대표이사 : 윤태현</span></li>
+                        <li>사업자등록번호 : 250-81-017751 사업자정보확인 통신판매업신고 : 제 2025-대구-0710 호</li>
+                        <li>개인정보 보호책임자 : 윤태현</li>
+                        <li>주소 : 대구 중구 중앙대로 366 반월센트럴타워 9,10층 데이풀</li>
+                    </ul>
+                </div>
+                <div class="footcall">
+                    <ul>
+                        <li>
+                            <b>CS CENTER</b>
+                        </li>
+                        <li>카카오 채널 상담</li>
+                        <li>EMAIL : th15926@daum.net</li>
+                        <li>평일 (월 ~ 금) AM 09:00 ~ PM 18:00 (공휴일 제외)</li>
+                    </ul>
+                    <ul>
+                        <li><b>BANKING INFO</b></li>
+                        <li>IM뱅크 : 508-13-017151-4</li>
+                        <li>예금주 : 윤태현(데이풀)</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

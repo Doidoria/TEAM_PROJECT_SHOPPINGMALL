@@ -1,0 +1,51 @@
+footer{
+    position: relative;
+    bottom: 0;
+    width: 1905px;
+    color:#54443f;
+}
+.footer-wrap{
+    width: 100%;
+    height: 300px;
+    background-color: #f1e4db;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+    position: relative;
+    display:flex;
+    margin-top: 30px;
+}
+footer li{
+    margin-bottom: 5px;
+}
+footer>div{
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.footinfo{
+    display:flex;
+    flex-direction: column;
+}
+.footinfo img{
+    width: 150px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+.company>li>span{
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 37px;
+}
+.company>li:last-child{
+    margin-top: 15px;
+}
+.footcall b{
+    font-size: 20px;
+}
+.footcall ul>li:first-child{
+    margin-bottom: 7px;
+}
+.footcall>ul:nth-child(1){
+    margin-bottom: 20px;
+}

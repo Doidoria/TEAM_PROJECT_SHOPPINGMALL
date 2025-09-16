@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/wrapper.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/header-mobile.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/footer-mobile.css">
+    <link rel="stylesheet" href="./css/MyPage.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./JS/main.js" defer></script>
+
+    <title>하루를 가득 채우다 DAYFUL</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header">
+                <span>배송지연 공지</span>
+            </div>
+            <nav>
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <div class="menu-btn"><span class="mb-center"></span></div>
+                </a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <div class="off-logo"><img src="./images/DAYFUL.png" alt="로고"></div>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="main-menu">
+                            <li><a href="">추천 제품</a></li>
+                            <li><a href="">신상 제품</a>
+                            <li><a href="">베스트</a></li>
+                            <li><a href="">이벤트</a></li>
+                            <li><a href="">스타일가이드</a></li>
+                            <li><a href="">커뮤니티</a></li>
+                        </ul>
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown">Dropdown button
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href=""><img src="./images/DAYFUL.png" alt="로고"></a>
+                </div>
+                <div class="submenu-btn-wrap">
+                    <div class="Search-box">
+                        <input type="text" placeholder="검색">
+                        <a href=""><img src="./images/Search.png" alt="검색창-아이콘" style="width: 15px;"></a>
+                    </div>
+                    <div class="login">
+                        <a href=""><img src="./images/login-icon.png" alt="로그인-아이콘"
+                                style="width: 27px;height: 27px;"></a>
+                    </div>
+                    <div class="cart">
+                        <a href=""><img src="./images/Cart.png" alt="장바구니-아이콘" style="width: 27px;height:30px;"></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="container" style="padding: 110px;">
+                <div id="contents" style="min-height: 400px; padding: 0 0 100px 0;">
+                    <div class="sub_content">
+                        <div class="side_content">
+                            <div class="sub_menu_box">
+                                <h2>마이페이지</h2>
+                                <ul class="sub_menu_mypage">
+                                    <li>
+                                        쇼핑정보
+                                        <ul class="sub_depth1">
+                                            <li><a href="">- 주문목록/배송조회</a></li>
+                                            <li><a href="">- 취소/반품/교환 내역</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        헤택관리
+                                        <ul class="sub_depth1">
+                                            <li><a href="">- 쿠폰</a></li>
+                                            <li><a href="">- 마일리지</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        고객센터
+                                        <ul class="sub_depth1">
+                                            <li><a href="">- 1:1문의</a></li>
+                                            <li><a href="">- 나의 상품문의</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        나의 리뷰
+                                        <ul class="sub_depth1">
+                                            <li><a href="">- 나의 리뷰</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        회원정보
+                                        <ul>
+                                            <li><a href="">- 회원정보 변경</a></li>
+                                            <li><a href="">- 회원 탈퇴</a></li>
+                                            <li><a href="">- 배송지 관리</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <div class="mypage_main">
+                                <div class="mypage_top_info">
+                                    <div class="mypage_top_txt">
+                                        <span class="grade_img">
+                                            <img src="" alt="WELCOME">
+                                        </span>
+                                        <div class="grade_txt">
+                                            <p>전익환님의</p>
+                                            <p>회원등급은
+                                                <span>
+                                                    WELCOM등급
+                                                </span>
+                                                입니다.
+                                            </p>
+                                            <div class="btn_layer">
+                                                <span class="btn_gray_list">
+                                                    <a href="" class="btn_gray_small">
+                                                        <em>등급혜택보기</em>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mypage_accumulate_price">
+                                        <p>누적금액</p>
+                                        <span>
+                                            <b>0</b>
+                                            <strong>원</strong>
+                                        </span>
+                                        <button type="button" onclick="">나의 구매내역</button> <!-- 클릭시 구매내역 페이지로 이동-->
+                                    </div>
+
+                                    <div class="mypage_nextlevel_info">
+                                        <p>다음등급 승급금액</p>
+                                        <span>
+                                            <b>50,000</b>
+                                            <span>원</span>
+                                        </span>
+                                    </div>
+
+                                    <div class="mypage_top_wallet">
+                                        <ul>
+                                            <li>
+                                                <span>
+                                                    <em>쿠폰</em>
+                                                    <a href="">
+                                                        <strong>6</strong>
+                                                        <em>장</em>
+                                                    </a>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <em>마일리지</em>
+                                                    <a href="">
+                                                        <strong>0</strong>
+                                                        <em>P</em>
+                                                    </a>
+                                                </span>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mypage_order_info">
+                                    <div class="mypage_zone_tit">
+                                        <h3>
+                                            진행 중인 주문
+                                            <span>최근 30일 내에 진행중인 주문정보입니다.</span>
+                                        </h3>
+                                    </div>
+
+                                    <div class="mypage_order_info_cont">
+                                        <ol>
+                                            <li><b>입금대기</b><strong>0</strong></li>
+                                            <li><b>결제완료</b><strong>0</strong></li>
+                                            <li><b>상품준비중</b><strong>0</strong></li>
+                                            <li><b>배송중</b><strong>0</strong></li>
+                                            <li><b>배송완료</b><strong>0</strong></li>
+                                            <li><b>구매확정</b><strong>0</strong></li>
+                                        </ol>
+                                        <div class="order_case_list">
+                                            <ul>
+                                                <li><b>• 취소</b><span>0건</span></li>
+                                                <li><b>• 교환</b><span>0건</span></li>
+                                                <li><b>• 반품</b><span>0건</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mypage_lately_info">
+                                    <div class="mypage_zone_tit">
+                                        <h3>
+                                            최근 주문 정보
+                                            <span>최근 30일 내에 주문하신 내역입니다.</span>
+                                        </h3>
+                                        
+                                    </div>
+                                    <div class="mypage_lately_info_cont">
+                                        <div class="mypage_table_type">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width: 15%">
+                                                    <!-- 날짜/주문번호 -->
+                                                    <col>
+                                                    <!-- 상품명/옵션 -->
+                                                    <col style="width: 15%">
+                                                    <!-- 상품금액/수량 -->
+                                                    <col style="width: 15%">
+                                                    <!-- 주문상태 -->
+                                                    <col style="width: 15%">
+                                                    <!-- 확인/리뷰 -->
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>날짜/주문번호</th>
+                                                        <th>상품명/옵션</th>
+                                                        <th>상품금액/수량</th>
+                                                        <th>주문상태</th>
+                                                        <th>확인/리뷰</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <p class="no_data">조회내역이 없습니다.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- 구매관련 레이어 추가 해야함 -->
+                                    </div>
+                                    <a href="" class="btn_board_more">+ 더보기</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-wrap">
+                <div class="footinfo">
+                    <img src="./images/DAYFUL.png" alt="logo">
+                    <ul class="company">
+                        <li><span>COMPANY : 데이풀</span><span>대표이사 : 윤태현</span></li>
+                        <li>사업자등록번호 : 250-81-017751 사업자정보확인 통신판매업신고 : 제 2025-대구-0710 호</li>
+                        <li>개인정보 보호책임자 : 윤태현</li>
+                        <li>주소 : 대구 중구 중앙대로 366 반월센트럴타워 9,10층 데이풀</li>
+                    </ul>
+                </div>
+                <div class="footcall">
+                    <ul>
+                        <li>
+                            <b>CS CENTER</b>
+                        </li>
+                        <li>카카오 채널 상담</li>
+                        <li>EMAIL : th15926@daum.net</li>
+                        <li>평일 (월 ~ 금) AM 09:00 ~ PM 18:00 (공휴일 제외)</li>
+                    </ul>
+                    <ul>
+                        <li><b>BANKING INFO</b></li>
+                        <li>IM뱅크 : 508-13-017151-4</li>
+                        <li>예금주 : 윤태현(데이풀)</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
